@@ -1,0 +1,95 @@
+JavaScript是什么？
+	JavaScript是世界上最流行的脚本语言。
+	DevC++
+	依赖于浏览器	Chrome		IE	FireFox	知乎
+	HTML	Android    Kotlin  Ob  jective-C    Swift
+	所有的网页，以及基于HTML5的手机App，交互逻辑都是由JS驱动的。
+
+JavaScript能干什么？
+	能跨平台、跨浏览器驱动网页，与用户交互。用户对页面进行了某个操作，页面对用户进行了某种反馈
+	鼠标悬停（mouseover），鼠标离开（mouseout），点击（click），获取焦点（focus），失去焦点（blur）
+	事件处理三要素：
+		事件源：事件发生在哪里？通常就是某个具体标签
+		事件类型：到底发生了什么事件？
+		事件处理：如何反馈？
+	幻灯片
+JavaScript的历史
+	Navigetor(网景)，Brendan   Eich，蹭热度，1995
+	K.R C       ANSI    C
+	ECMAScript:
+		微软的JScript
+		ECMA组织
+		语法标准，1997
+	https://www.w3cschool.cn/        github        git     linux
+	https://www.liaoxuefeng.com/
+JavaScript的版本
+	核心一致
+	最新版本ES6,2015.6
+	前端开发         后端
+
+
+
+JS入门
+	回顾HTML + C
+		HTML：标签、CSS、div+CSS
+		C:语法、程序结构（顺序、分支：if-else,switch-case        循环：for\while\do-while）、数组、函数、结构体、指针
+		chinese   language
+		open    in    browser
+		加载方式：script标记或外部文件
+			调用    .
+			对象调用方法或属性
+			引入外部文件的好处
+				代码共用
+			目标设定
+				相对路径
+			testl
+		开发者工具
+			F12，console        log    info    error        warn
+			console.log("%d年%d月%d日",2011,3,26);
+	练习，打开学校官网主页有哪些js文件。测试console命令	
+	基本语法
+		JS是一门极其不规范的编程语言
+		数据类型
+			Number：数字类型，不分整型实型
+				123; // 整数123
+				0.456; // 浮点数0.456
+				1.2345e3; // 科学计数法表示，等同于1234.5
+				-99; // 负数
+				NaN; // Not a Number，当无法计算结果时用NaN表示，如除数为0
+				Infinity; // Infinity表示无限大，当数值超过了JavaScript的Number所能表示的边界值时，就表示为Infinity
+			String：
+				字符串，以单引号'或双引号"括起来的文本
+				'abc',"China"
+			Boolean：布尔值
+				即逻辑真假 1 0  7 < 5
+				true,false
+		注释：与C同 <!-- -->
+		常量定义：const 不推荐  const PI_OF_CIRCLE
+			const int PI = 3.14;
+			#define PI 3.14  
+		变量定义：
+			int stuHeight;   有道词典
+			var variable
+			var engScore;
+			printf()  function
+		标识符： 
+			以字母、下划线或者$符号开头
+			由字母、下划线、$符号和数字组成
+			大小写敏感
+			不可跟关键字同名
+			break、delete、function、return、typeof、case、do、if、switch、var、catch、else、in、this、void、continue、false、instanceof、throw、while、debugger、finally、new、true、const、with、default、for、null和try。   
+
+		运算符：与C同	优先级  5 + 3	x += 4;  ? :
+				x = 5 < 3 ? 1 : 2;
+		
+		语句结束符:   ; 
+		
+	事件处理
+		事件处理三要素：
+			事件源：事件发生在那里？通常就是某个具体的标签
+			事件类型：到底发生了什么事件？
+			事件处理：如何反馈？
+	仨按钮，弹出对话框案例。
+	alert  警告框
+	1.cancel   发生mouseover  并给用户提示，确认框		
+	2.btn      发生dblclick    并给用户提示，警告框	
