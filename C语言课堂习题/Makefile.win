@@ -1,0 +1,28 @@
+# Project: Á·Ï°
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Á·Ï°1.o
+LINKOBJ  = Á·Ï°1.o
+LIBS     = -L"F:/DEV/DevCppPortable/MinGW64/lib" -L"F:/DEV/DevCppPortable/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"F:/DEV/DevCppPortable/MinGW64/include" -I"F:/DEV/DevCppPortable/MinGW64/x86_64-w64-mingw32/include" -I"F:/DEV/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"F:/DEV/DevCppPortable/MinGW64/include" -I"F:/DEV/DevCppPortable/MinGW64/x86_64-w64-mingw32/include" -I"F:/DEV/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/DEV/DevCppPortable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Á·Ï°.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Á·Ï°1.o: Á·Ï°1.c
+	$(CC) -c Á·Ï°1.c -o Á·Ï°1.o $(CFLAGS)
