@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XianShi</title>
+</head>
+<style>
+        body{
+            background:url(../images/仙侠.jpg);
+            overflow:scroll;
+        }
+
+        a{text-decoration:none;}
+
+        h1{text-align:center;color:blue;}
+
+        *{margin:0px;padding:0px;list-style:none;}
+
+        #con{
+            width:1000px;margin:100px auto;
+        }
+
+        #con ul li{
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            text-align:center;
+        }
+
+        #con a{
+            text-decoration:none;
+            color:#fff;display:block;
+            width:200px;
+            height:40px;
+            background:grey;
+        }
+
+        #con a:hover{
+            background:pink;
+        }
+
+        #con ul ul{
+            display:none;
+        }
+
+        #demo{
+            text-justify: auto;
+            border:1px solid grey;
+            height:200px;
+            width:1010px;
+        }
+    
+        #demo1{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid orange;
+            border-radius:20px;
+            background-color:orange;
+        }
+        #demo1 a{
+            text-decoration:none;
+            color:black;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center;
+        }
+        
+        #demo2{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid green;
+            border-radius:20px;
+        }
+        #demo2 a{
+            text-decoration:none;
+            color:green;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center
+        }
+
+        .butText{
+            border:1px solid grey;
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            background:black;
+            color:white;
+            float:left;
+            width:1520px;
+            line-height:50px;
+        }
+</style>
+<body>
+    <h1>现实精选</h1>
+
+    <div id = "con">
+        <ul>
+            <li><a href = "index.html">首页</a></li>
+            <li><a href = "#">漫画</a></li>
+            <li><a href = "#">高评专区</a></li>
+            <li><a href = "#">免费专区</a></li>
+            <li><a href = "#">付费专区</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img  id = "img1" onmouseover = "bigger1()" onmouseout = "smaller1()" src = "../images/现实1.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            李发财，一个普通的监狱警察，一个不聪明的实诚人。
+                            他没有想过自己有一天会成为英雄，只是认为自己做了自己该做的事情，
+                            实际上，在犯人的眼里、心里他成了严父、慈母，是一缕希望的阳光，十几年的玉汝于成，他成为了一个活着的烈士！
+                        </span>
+                    </div>
+                    <br>
+                   <div id = "demo1"><a href = "http://book.zhulang.com/590892/" ><b>开始阅读</b></a></div>
+                   <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>属于你的那一缕阳光</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/9870872.html">韩太明</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img2" onmouseover = "bigger2()" onmouseout = "smaller2()" src = "../images/现实2.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            作品以“打拐”为主题，生动描写了一个有着严重小民思想的普通青年，在“打
+                            拐”的道路上，思想不断升华，最后倾其所有，只为帮助那些失去孩子的可怜家
+                            庭，找回被拐的孩子，让他们合家团圆。作品充分展现了随着时代发展，人们的
+                            思想品格不断升华，实现了从“小我”到“大我”的思想转变。
+                        </span>
+                    </div>
+                    <br>
+                    <div id = "demo1" ><a href = "http://book.zhulang.com/649897/" ><b>开始阅读</b></a></div>
+                    <div id = "demo2" ><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>人间团圆</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/51574167.html">水漾胭脂</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>          
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img3" onmouseover = "bigger3()" onmouseout = "smaller3()" src = "../images/现实3.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            新世纪初，在城市化进程中，豫西九龙山区明清古村落——瓦罐村，人去村空，
+                            最后一户人家中九十七岁的老红军魏长庚和他的侄子魏石寨以及他们的忠实
+                            朋友老黄狗，一同守护着这里的好山好水和老祖先留下的古村落。在他们的努力
+                            下，不但守住了绿水青山，而且使这一古村落得到了开发利用，成为旅游胜地。
+                            然而，魏长庚老人却永远长眠于此……
+                        </span>
+                    </div>
+                    
+                    <br>
+                    <div id = "demo1"><a href = "http://book.zhulang.com/660109/" ><b>开始阅读</b></a></div>
+                    <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>最后的村庄</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/67365443.html">塬上草</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>   
+    
+    <span class = "butText">
+        版权所有：陈泓如 | 网页信息 | 创建日期：2020/6/30 | 技术支持：javascript、HTML、CSS | 制作理念：构建一个小说网站
+    </span>
+</body>
+<script type = "text/javascript">
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var img3 = document.getElementById("img3");
+
+    function bigger1(){
+        img1.style.width = "250px";
+        img1.style.height = "300px";
+    }
+
+    function smaller1(){
+         img1.style.width = "200px";
+         img1.style.height = "250px";
+    }
+
+    function bigger2(){
+        img2.style.width = "250px";
+        img2.style.height = "300px";
+    }
+
+    function smaller2(){
+         img2.style.width = "200px";
+         img2.style.height = "250px";
+    }
+
+    function bigger3(){
+        img3.style.width = "250px";
+        img3.style.height = "300px";
+    }
+
+    function smaller3(){
+         img3.style.width = "200px";
+         img3.style.height = "250px";
+    }
+    
+</script>
+
+</html>
+

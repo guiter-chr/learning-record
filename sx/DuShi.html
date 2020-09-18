@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuShi</title>
+</head>
+<style>
+        body{
+            background:url(../images/仙侠.jpg);
+            overflow:scroll;
+        }
+
+        a{text-decoration:none;}
+
+        h1{text-align:center;color:blue;}
+
+        *{margin:0px;padding:0px;list-style:none;}
+
+        #con{
+            width:1000px;margin:100px auto;
+        }
+
+        #con ul li{
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            text-align:center;
+        }
+
+        #con a{
+            text-decoration:none;
+            color:#fff;display:block;
+            width:200px;
+            height:40px;
+            background:grey;
+        }
+
+        #con a:hover{
+            background:pink;
+        }
+
+        #con ul ul{
+            display:none;
+        }
+
+        #demo{
+            text-justify: auto;
+            border:1px solid grey;
+            height:200px;
+            width:1010px;
+        }
+    
+        #demo1{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid orange;
+            border-radius:20px;
+            background-color:orange;
+        }
+        #demo1 a{
+            text-decoration:none;
+            color:black;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center;
+        }
+        
+        #demo2{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid green;
+            border-radius:20px;
+        }
+        #demo2 a{
+            text-decoration:none;
+            color:green;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center
+        }
+
+        .butText{
+            border:1px solid grey;
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            background:black;
+            color:white;
+            float:left;
+            width:1520px;
+            line-height:50px;
+        }
+
+</style>
+<body>
+    <h1>都市精选</h1>
+
+    <div id = "con">
+        <ul>
+            <li><a href = "index.html">首页</a></li>
+            <li><a href = "#">漫画</a></li>
+            <li><a href = "#">高评专区</a></li>
+            <li><a href = "#">免费专区</a></li>
+            <li><a href = "#">付费专区</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img1" onmouseover = "bigger1()" onmouseout = "smaller1()" src = "../images/都市1.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            笃信自己不会成为圣人的白小海本想平静工作，淡然生活，做一位普通教师养家
+                            糊口。可是，造化弄人，第一次说课得罪师父，第一次上课被全班刁难，第一次
+                            拿到工资，警察居然来了……
+                        </span>
+                    </div>
+                    
+                    <br>
+                   <div id = "demo1"><a href = "http://book.zhulang.com/552694/" ><b>开始阅读</b></a></div>
+                   <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>三尺人生</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/8853563.html">逍遥夫子</a>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img2" onmouseover = "bigger2()" onmouseout = "smaller2()" src = "../images/都市2.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            一部反映中国西部黄河之畔县域经济改革四十年间，草根阶层文化心理奋斗路程
+                            的长篇小说，描绘出一幅盘根错节惊心动魄波澜壮阔的当代社会世态百相画卷。
+                            【向新中国成立70周年献礼参赛作品】
+                        </span>
+                    </div>
+                    
+                    <br>
+                    <div id = "demo1" ><a href = "http://book.zhulang.com/649897/" ><b>开始阅读</b></a></div>
+                    <div id = "demo2" ><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>大河峥嵘</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/22449392.html">白学究</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>          
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img3" onmouseover = "bigger3()" onmouseout = "smaller3()" src = "../images/都市3.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            大雨冲垮了小金河桥，老村支书前往省城找建筑商陈飞黄资助修桥，陈飞黄给了他
+                            五万块，可这笔钱根本不够修桥，老村支书不知道，其实陈飞黄早已破产。
+                            陈飞黄出门躲债，在火车站遇到同乡猴子和二傻。二傻在建筑工地打工摔伤了腿，
+                            陈飞黄决定护送他回老家。
+                        </span>
+                    </div>
+                    
+                    <br>
+                   <div id = "demo1"><a href="http://www.xxs8.com/book/read/book_id/737067.html"><b>开始阅读</b></a></div>
+                   <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <h2>特别的归乡者</h2>
+                <span>
+                    作者：
+                    <a href="http://www.xxs8.com/author/index/aid/68252335.html" >夜神翼</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+    
+    </table>
+    
+    <span class = "butText">
+        版权所有：陈泓如 | 网页信息 | 创建日期：2020/6/30 | 技术支持：javascript、HTML、CSS | 制作理念：构建一个小说网站
+    </span>
+    
+</body>
+
+<script type = "text/javascript">
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var img3 = document.getElementById("img3");
+
+    function bigger1(){
+        img1.style.width = "250px";
+        img1.style.height = "300px";
+    }
+
+    function smaller1(){
+         img1.style.width = "200px";
+         img1.style.height = "250px";
+    }
+
+    function bigger2(){
+        img2.style.width = "250px";
+        img2.style.height = "300px";
+    }
+
+    function smaller2(){
+         img2.style.width = "200px";
+         img2.style.height = "250px";
+    }
+
+    function bigger3(){
+        img3.style.width = "250px";
+        img3.style.height = "300px";
+    }
+
+    function smaller3(){
+         img3.style.width = "200px";
+         img3.style.height = "250px";
+    }
+    
+</script>
+</html>
+

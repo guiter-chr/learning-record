@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XuanHuan</title>
+</head>
+<style>
+        body{
+            background:url(../images/仙侠.jpg);
+            overflow:scroll;
+        }
+
+        h1{text-align:center;color:blue;}
+        
+        a{text-decoration:none;}
+
+        *{margin:0px;padding:0px;list-style:none;}
+
+        #con{
+            width:1000px;margin:100px auto;
+        }
+
+        #con ul li{
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            text-align:center;
+        }
+
+        #con a{
+            text-decoration:none;
+            color:#fff;display:block;
+            width:200px;
+            height:40px;
+            background:grey;
+        }
+
+        #con a:hover{
+            background:pink;
+        }
+
+        #con ul ul{
+            display:none;
+        }
+
+        #demo{
+            text-justify: auto;
+            border:1px solid grey;
+            height:200px;
+            width:1010px;
+        }
+    
+        #demo1{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid orange;
+            border-radius:20px;
+            background-color:orange;
+        }
+        #demo1 a{
+            text-decoration:none;
+            color:black;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center;
+        }
+        
+        #demo2{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid green;
+            border-radius:20px;
+        }
+        #demo2 a{
+            text-decoration:none;
+            color:green;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center
+        }
+
+        .butText{
+            border:1px solid grey;
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            background:black;
+            color:white;
+            float:left;
+            width:1520px;
+            line-height:50px;
+        }
+</style>
+<body>
+    <h1>玄幻精选</h1>
+
+    <div id = "con">
+        <ul>
+            <li><a href = "index.html">首页</a></li>
+            <li><a href = "#">漫画</a></li>
+            <li><a href = "#">高评专区</a></li>
+            <li><a href = "#">免费专区</a></li>
+            <li><a href = "#">付费专区</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img1" onmouseover = "bigger1()" onmouseout = "smaller1()" src = "../images/玄幻1.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            没有什么可以长存不灭。
+                            无论是绝代风华的女帝，还是修为惊天的武祖，亦或是气吞天地的魔尊，以及有着通天之能的道神，最终都难逃一死，被岁月所淹没。
+                            唯有兵器，永不腐朽，与世长存。
+                            纵然器身破碎，亦有不灭器灵，存留天地，有朝一日，器灵再现。
+                            八十万年之后，太古第一凶兵以一屡残灵复苏，获得天生为器的天兵神体，以器灵入主，占据人身，化而为人。
+                            以血肉之躯，以凶器之灵，修霸器之道。
+                        </span>
+                    </div>
+                    
+                    <br>
+                   <div id = "demo1"><a href = "http://book.zhulang.com/653156/" ><b>开始阅读</b></a></div>
+                   <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>霸器</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/24176664.html">东方行云</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img2" onmouseover = "bigger2()" onmouseout = "smaller2()" src = "../images/玄幻2.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            九州大陆，强者为尊，陨落天才楚星雨巧得修罗神骨，破苍穹，逆乾坤。
+                            修无上传承，凝最强神魂，战无不胜，无人敢挡！！！
+                        </span>
+                    </div>
+                    
+                    <br>
+                    <div id = "demo1" ><a href = "http://book.zhulang.com/560433/" ><b>开始阅读</b></a></div>
+                    <div id = "demo2" ><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>修罗神魂</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/60488773.html">好人卡</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>          
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img3" onmouseover = "bigger3()" onmouseout = "smaller3()" src = "../images/玄幻3.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>一念剑诛万魔，一怒沧海横流。在万族林立，皇朝并起的八荒大陆，少年持剑，斩天骄，斗妖孽，败万族，称人王！</span>
+                    </div>
+                    <br>
+                    <div id = "demo1"><a href = "http://book.zhulang.com/586578/" ><b>开始阅读</b></a></div>
+                    <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>八荒战仙</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/65123382.html">神之归路</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>  
+    
+    <span class = "butText">
+        版权所有：陈泓如 | 网页信息 | 创建日期：2020/6/30 | 技术支持：javascript、HTML、CSS | 制作理念：构建一个小说网站
+    </span>
+</body>
+<script type = "text/javascript">
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var img3 = document.getElementById("img3");
+
+    function bigger1(){
+        img1.style.width = "250px";
+        img1.style.height = "300px";
+    }
+
+    function smaller1(){
+         img1.style.width = "200px";
+         img1.style.height = "250px";
+    }
+
+    function bigger2(){
+        img2.style.width = "250px";
+        img2.style.height = "300px";
+    }
+
+    function smaller2(){
+         img2.style.width = "200px";
+         img2.style.height = "250px";
+    }
+
+    function bigger3(){
+        img3.style.width = "250px";
+        img3.style.height = "300px";
+    }
+
+    function smaller3(){
+         img3.style.width = "200px";
+         img3.style.height = "250px";
+    }
+    
+</script>
+</html>

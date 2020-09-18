@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<style>
+        h1{
+            text-align:center;
+            color:blue;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        #a{
+            width:1000px;
+            margin:100px auto;
+        }
+        #a ul li{
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            text-align:center;
+        }
+        #a a{
+            text-decoration:none;
+            color:#fff;
+            display:block;
+            width:200px;
+            height:40px;
+            background:grey;
+        }
+        #a a:hover{
+            background:pink;
+        }
+        #a ul ul{
+            display:none;
+        }
+    
+        #b{
+            margin:20px;
+            padding:0px;
+            }
+        #b a{
+            text-decoration:none;
+            display:block;
+            font-size:20px;
+            }
+
+        body{
+            background:url(../images/仙侠.jpg);
+            overflow:scroll;
+        }
+
+        #div0{
+            width: 1080px;
+            height: 380px;
+            margin: 0 auto;
+            background-color: beige;
+        }
+
+        img{
+            width: 1080px;
+            height: 380px;
+            display: block;
+        }
+
+        .div1
+        {
+            height: 60px;
+            position: relative;
+            top:-60px;
+            width: 240px;
+            margin: 0 auto;
+            left: 0px;
+            z-index: 999;
+            text-align: center;
+        }
+
+        .div1 ul li
+        {
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+            float: left;
+            list-style: none;
+        }
+
+        .div1 ul li img{
+            width: 24px;
+            height: 24px;
+        }
+
+        .div1 ul li img:hover{
+            cursor: pointer;
+        }
+
+        .butText{
+            border:1px solid grey;
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            background:black;
+            color:white;
+            float:left;
+            width:1520px;
+            line-height:50px;
+        }
+
+    
+</style>
+
+<body>
+    <h1>成诚小说网</h1>
+    <div id = "a">
+        <ul >
+            <li id = "li01">
+                <a href = "#">首页</a>
+                <ul id = "ul01">
+                    <li><a href = "#">简介</a></li>
+                    <li><a href = "#">资讯</a></li>
+                    <li><a href = "#">最新</a></li>
+                    <li><a href = "#">热榜</a></li>
+                </ul>
+            </li>
+            <li id = "li02">
+                <a href = "#">漫画</a>
+                <ul id = "ul02">
+                    <li><a href = "#">国漫</a></li>
+                    <li><a href = "#">港漫</a></li>
+                    <li><a href = "#">日漫</a></li>
+                    <li><a href = "#">美漫</a></li>
+                </ul>
+            </li>
+            <li id = "li03">
+                <a href = "#">高评专区</a>
+                <ul id = "ul03"> 
+                    <li><a href = "#">豆瓣高评</a></li>
+                    <li><a href = "#">知乎高评</a></li>
+                    <li><a href = "#">读者高评</a></li>
+                    <li><a href = "#">热度高评</a></li>
+                </ul>
+            </li>
+            <li id = "li04">
+                <a href = "#">免费专区</a>
+                <ul id = "ul04">
+                    <li><a href = "#">日免专区</a></li>
+                    <li><a href = "#">周免专区</a></li>
+                    <li><a href = "#">月免专区</a></li>
+                    <li><a href = "#">年免专区</a></li>
+                </ul>
+            </li>
+            <li id = "li05">
+                <a href = "#">付费专区</a>
+                <ul id = "ul05">
+                    <li><a href = "#">5元专区</a></li>
+                    <li><a href = "#">10元专区</a></li>
+                    <li><a href = "#">15元专区</a></li>
+                    <li><a href = "#">20元专区</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <div id="b">
+        <ul >
+            <li>
+                <a href = "XianXia.html">仙侠</a>
+            </li>
+            <li>
+                <a href = "XuanHuan.html">玄幻</a>
+            </li>
+            <li>
+                <a href = "XianShi.html">现实</a>
+            </li>
+            <li>
+                <a href = "DuShi.html">都市</a>
+            </li>
+            <li>
+                <a href = "YanQing.html">言情</a>
+            </li>
+            <li>
+                <a href = "LiShi.html">历史</a>
+            </li>
+            <li>
+                <a href = "JunShi.html">军事</a>
+            </li>
+            <li>
+                <a href = "XiaoYuan.html">校园</a>
+            </li>
+            <li>
+                <a href = "TiYou.html">体育</a>
+            </li>
+            <li>
+                <a href = "LingYi.html">灵异</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="div0">
+        <img src="../images/p1.png" id="img"/>
+        <div class="div1" style="display: block;">
+            <ul>
+                <li id="p1" onmouseover="point(this)" onmouseout="leave()">
+                    <img src="../images/p2.png " alt="" id="i0"/>
+                </li>
+
+                <li id="p2" onmouseover="point(this)" onmouseout="leave()">
+                   <img src="../images/p2.png" alt="" id="i1"/>
+                </li>
+
+                <li id="imageNo0" onmouseover="point(this)" onmouseout="leave()">
+                    <img src="../images/p2.png" alt="" id="i2"/>
+                </li>
+
+                <li id="imageNo1" onmouseover="point(this)" onmouseout="leave()">
+                    <img src="../images/p2.png" alt="" id="i3"/>
+                </li>
+
+                <li id="imageNo2" onmouseover="point(this)" onmouseout="leave()">
+                    <img src="../images/p2.png" alt="" id="i4"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <span class = "butText">
+        版权所有：陈泓如 | 网页信息 | 创建日期：2020/6/30 | 技术支持：javascript、HTML、CSS | 制作理念：构建一个小说网站
+    </span>
+    
+</body>
+
+<script type="text/javascript">
+    function myFunction(param1,param2){
+      var myli = document.getElementById(param1);
+      var myul = document.getElementById(param2);
+    myli.onmouseover = function(){
+        myul.style.display = 'block';
+      }
+        myli.onmouseout = function(){
+        myul.style.display = 'none';
+     }
+  }
+    myFunction('li01','ul01');
+    myFunction('li02','ul02');
+    myFunction('li03','ul03');
+    myFunction('li04','ul04');
+    myFunction('li05','ul05');
+</script>
+
+<script>
+    var min = 1,max = 5;
+    var image = new Array();
+        image[0] = "../images/小说2.jpeg";
+        image[1] = "../images/小说3.jpg";
+        image[2] = "../images/小说4.jpg";
+        image[3] = "../images/小说5.jpg";
+        image[4] = "../images/小说6.jpg";
+         
+    var liImg = new Array();
+        liImg[0] = "i0";
+        liImg[1] = "i1";
+        liImg[2] = "i2";
+        liImg[3] = "i3";
+        liImg[4] = "i4";
+
+    var liId = new Array();
+        liId[0] = "p1";
+        liId[1] = "p2";
+        liId[2] = "imageNo0";
+        liId[3] = "imageNo1";
+        liId[4] = "imageNo2";
+
+        function loop()
+    {
+        var str = document.getElementById("img").src;
+
+        for(var i = 0;i < 5;i++)
+        {
+            if(min == 5)
+            {
+                min = 0;
+            }
+            if(i == min)
+            {
+                document.getElementById("img").src = image[i];
+                min++;
+                
+                if(i == 0)
+                {
+                    document.getElementById(liImg[i].src="../images/p1.png");
+                    document.getElementById(liImg[4].src="../images/p2.png");
+                }else{
+                    document.getElementById(liImg[i].src="../images/p1.png");
+                    document.getElementById(liImg[i-1].src="../images/p2.png");
+                }
+                break;
+            }
+        }
+    }
+
+
+    var int = self.setInterval("loop()",2000);
+
+    var a = 0;
+
+    function point(obj)
+    {
+        clearInterval(int);
+        for(var i = 0;i < 5;i++)
+        {
+            if(obj.id == liId[i])
+            {
+                document.getElementById("img").src = image[i];
+                min = i + 1;
+                document.getElementById(liImg[i]).src = "../images/p1.png";
+                for(var a = 0;a < 5;a++)
+                {
+                    if(a != i)
+                    {
+                        document.getElementById(liImg[a]).src = "../images/p2.png";
+                    }
+                }
+            }
+        }
+    }
+
+    function leave()
+    {
+        int = setInterval("loop()",2000);
+    }
+
+</script>
+
+</html>
+

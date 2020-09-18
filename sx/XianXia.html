@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XianXia</title>
+</head>
+<style>
+        body{
+            background:url(../images/仙侠.jpg);
+            overflow:scroll;
+        }
+        a{text-decoration:none;}
+        h1{
+            text-align:center;
+            color:blue;
+        }
+        .Img{
+            width:40px;
+            height:50px;
+            float:left;
+        }
+        
+        .word{
+            float:left;
+            width:80px;
+            line-height:10px
+        }
+    
+        *{margin:0px;padding:0px;list-style:none;}
+
+        #con{
+            width:1000px;margin:100px auto;
+        }
+
+        #con ul li{
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            text-align:center;
+        }
+
+        #con a{
+            text-decoration:none;
+            color:#fff;display:block;
+            width:200px;
+            height:40px;
+            background:grey;
+        }
+
+        #con a:hover{
+            background:pink;
+        }
+
+        #con ul ul{
+            display:none;
+        }
+
+        #demo{
+            text-justify: auto;
+            border:1px solid grey;
+            height:200px;
+            width:1010px;
+        }
+    
+        #demo1{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid orange;
+            border-radius:20px;
+            background-color:orange;
+        }
+        #demo1 a{
+            text-decoration:none;
+            color:black;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center;
+        }
+        
+        #demo2{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid green;
+            border-radius:20px;
+        }
+        #demo2 a{
+            text-decoration:none;
+            color:green;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center
+        }
+        
+        .butText{
+            border:1px solid grey;
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            background:black;
+            color:white;
+            float:left;
+            width:1520px;
+            line-height:50px;
+        }
+    
+</style>
+<body>
+    <h1>仙侠精选</h1>
+
+    <div id = "con">
+        <ul>
+            <li><a href = "index.html">首页</a></li>
+            <li><a href = "#">漫画</a></li>
+            <li><a href = "#">高评专区</a></li>
+            <li><a href = "#">免费专区</a></li>
+            <li><a href = "#">付费专区</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img1" onmouseover = "bigger1()" onmouseout = "smaller1()" src = "../images/仙侠1.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            绝世剑仙林玄渡劫之时，被围攻而死，一缕神魂穿越时空，来到修真小国，一步步重回巅峰报仇，为此建立无上剑仙宗门，登临绝顶，睥睨众生。
+                            百万大军，不敌绝世一剑！
+                            林玄以无敌之资，纵横天下！
+                        </span>
+                    </div>
+                    
+                    <br>
+                    <div id = "demo1" ><a href = "http://book.zhulang.com/636953/" >开始阅读</a></div>
+                    <div id = "demo2" ><a href = "#">加入书架</a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>仙剑至尊</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/36668952.html">白衣绝世</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+    
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img2" onmouseover = "bigger2()" onmouseout = "smaller2()" src = "../images/仙侠2.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            一场黑色的大火，掀开了大凉山神秘的轻纱。
+                            一柄残缺的巨剑，斩破了神魔大陆的千古岁月。
+                            失去记忆的少年，在浑噩中苏醒，在那个看不见光明的世界中，留下了无数动人心魄的传奇。
+                            有人说，他是魔，但他只是一名剑客，孤独的剑客。
+                        </span>
+                    </div>
+                    
+                    <br>
+                    <div id = "demo1" ><a href = "http://book.zhulang.com/462885/" >开始阅读</a></div>
+                    <div id = "demo2" ><a href = "#">加入书架</a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>剑鸣九天</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/22836200.html">一株仙草</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>          
+
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img3" onmouseover = "bigger3()" onmouseout = "smaller3()" src = "../images/仙侠3.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+
+                    <div id = "demo">
+                        <span>穿越后，成为已死的废柴少爷，遇上了神秘老者南叔。</span>
+                        <span>为亲情，为红颜，为身边最亲的人，陆少游从废柴一步步踏上强者之路。</span>
+                        <span>强者之路，一路荆棘遍布，却也阻挡不住一颗强者之心。</span>
+                        <span>醉卧美人膝，醒掌天下权，传言武道巅峰，灵道极致，便能踏碎虚空。灵武双修，不世霸枭，既然来了，就要留下一世传奇。</span>
+                    </div>
+                    
+                    <br>
+                    <div id = "demo1"><a href = "http://book.zhulang.com/189843/" >开始阅读</a></div>
+                    <div id = "demo2"><a href = "#">加入书架</a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>异世灵武天下</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/6795581.html">禹枫</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>   
+    
+    <span class = "butText">
+        版权所有：陈泓如 | 网页信息 | 创建日期：2020/6/30 | 技术支持：javascript、HTML、CSS | 制作理念：构建一个小说网站
+    </span>
+</body>
+
+<script type = "text/javascript">
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var img3 = document.getElementById("img3");
+
+    function bigger1(){
+        img1.style.width = "250px";
+        img1.style.height = "300px";
+    }
+
+    function smaller1(){
+         img1.style.width = "200px";
+         img1.style.height = "250px";
+    }
+
+    function bigger2(){
+        img2.style.width = "250px";
+        img2.style.height = "300px";
+    }
+
+    function smaller2(){
+         img2.style.width = "200px";
+         img2.style.height = "250px";
+    }
+
+    function bigger3(){
+        img3.style.width = "250px";
+        img3.style.height = "300px";
+    }
+
+    function smaller3(){
+         img3.style.width = "200px";
+         img3.style.height = "250px";
+    }
+    
+</script>
+</html>

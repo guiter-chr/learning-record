@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiYou</title>
+</head>
+<style>
+        body{
+            background:url(../images/仙侠.jpg);
+            overflow:scroll;
+        }
+
+        a{text-decoration:none;}
+
+        h1{text-align:center;color:blue;}
+
+        *{margin:0px;padding:0px;list-style:none;}
+
+        #con{
+            width:1000px;margin:100px auto;
+        }
+
+        #con ul li{
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            text-align:center;
+        }
+
+        #con a{
+            text-decoration:none;
+            color:#fff;display:block;
+            width:200px;
+            height:40px;
+            background:grey;
+        }
+
+        #con a:hover{
+            background:pink;
+        }
+
+        #con ul ul{
+            display:none;
+        }
+
+        #demo{
+            text-justify: auto;
+            border:1px solid grey;
+            height:200px;
+            width:1010px;
+        }
+    
+        #demo1{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid orange;
+            border-radius:20px;
+            background-color:orange;
+        }
+        #demo1 a{
+            text-decoration:none;
+            color:black;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center;
+        }
+        
+        #demo2{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid green;
+            border-radius:20px;
+        }
+        #demo2 a{
+            text-decoration:none;
+            color:green;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center
+        }
+
+        .butText{
+            border:1px solid grey;
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            background:black;
+            color:white;
+            float:left;
+            width:1520px;
+            line-height:50px;
+        }
+</style>
+<body>
+    <h1>体育精选</h1>
+
+    <div id = "con">
+        <ul>
+            <li><a href = "index.html">首页</a></li>
+            <li><a href = "#">漫画</a></li>
+            <li><a href = "#">高评专区</a></li>
+            <li><a href = "#">免费专区</a></li>
+            <li><a href = "#">付费专区</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img1" onmouseover = "bigger1()" onmouseout = "smaller1()" src = "../images/体育1.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            一位海归“菜鸟”年轻姑娘，被中国排协邀请担任中国女排二队主教练，带领一
+                            群20岁出头的”二队“选手不忘初心为了梦想去奋斗。在危机之际，她们”接
+                            棒“中国女排，为了”升国旗、奏国歌“的誓言，为了传承”祖国至上、团结协
+                            作、顽强拼搏、永不言败“的女排精神，她们砥砺前行……
+                        </span>
+                    </div>
+                    
+                    <br>
+                   <div id = "demo1"><a href = "http://book.zhulang.com/717695/" ><b>开始阅读</b></a></div>
+                   <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>2.24米的天际</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/65657545.html">行知</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img2" onmouseover = "bigger2()" onmouseout = "smaller2()" src = "../images/体育2.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>颜伟男曾经说过，他想成为那个战无不胜的球员，因为...</span>
+                    </div>
+                    <br>
+                    <div id = "demo1" ><a href = "http://book.zhulang.com/649897/" ><b>开始阅读</b></a></div>
+                    <div id = "demo2" ><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>人间团圆</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/31260342.html" target="_blank">乱世小飞侠</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>          
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img3" onmouseover = "bigger3()" onmouseout = "smaller3()" src = "../images/体育3.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>那是一种青春的回忆，高中相识的三人，成就篮球的不...</span>
+                    </div>
+                    <br>
+                    <div id = "demo1"><a href = "http://book.zhulang.com/660109/" ><b>开始阅读</b></a></div>
+                    <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>最后的村庄</h2>
+                <span>
+                    作者：
+                    <a href="http://www.zhulang.com/author/index/aid/42042074.html" target="_blank">青叶溟</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>          
+    
+    <span class = "butText">
+        版权所有：陈泓如 | 网页信息 | 创建日期：2020/6/30 | 技术支持：javascript、HTML、CSS | 制作理念：构建一个小说网站
+    </span>
+</body>
+<script type = "text/javascript">
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var img3 = document.getElementById("img3");
+
+    function bigger1(){
+        img1.style.width = "250px";
+        img1.style.height = "300px";
+    }
+
+    function smaller1(){
+         img1.style.width = "200px";
+         img1.style.height = "250px";
+    }
+
+    function bigger2(){
+        img2.style.width = "250px";
+        img2.style.height = "300px";
+    }
+
+    function smaller2(){
+         img2.style.width = "200px";
+         img2.style.height = "250px";
+    }
+
+    function bigger3(){
+        img3.style.width = "250px";
+        img3.style.height = "300px";
+    }
+
+    function smaller3(){
+         img3.style.width = "200px";
+         img3.style.height = "250px";
+    }
+    
+</script>
+</html>

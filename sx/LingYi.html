@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingYi</title>
+</head>
+<style>
+        body{
+            background:url(../images/仙侠.jpg);
+            overflow:scroll;
+        }
+
+        a{text-decoration:none;}
+
+        h1{text-align:center;color:blue;}
+
+        *{margin:0px;padding:0px;list-style:none;}
+
+        #con{
+            width:1000px;margin:100px auto;
+        }
+
+        #con ul li{
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            text-align:center;
+        }
+
+        #con a{
+            text-decoration:none;
+            color:#fff;display:block;
+            width:200px;
+            height:40px;
+            background:grey;
+        }
+
+        #con a:hover{
+            background:pink;
+        }
+
+        #con ul ul{
+            display:none;
+        }
+
+        #demo{
+            text-justify: auto;
+            border:1px solid grey;
+            height:200px;
+            width:1010px;
+        }
+    
+        #demo1{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid orange;
+            border-radius:20px;
+            background-color:orange;
+        }
+        #demo1 a{
+            text-decoration:none;
+            color:black;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center;
+        }
+        
+        #demo2{
+            margin:10px;
+            padding:0px;
+            float:left;
+            width:200px;
+            height:40px;
+            line-height:30px;
+            border:1px solid green;
+            border-radius:20px;
+        }
+        #demo2 a{
+            text-decoration:none;
+            color:green;
+            display:block;
+            width:200px;
+            height:40px;
+            text-align:center
+        }
+        
+        .butText{
+            border:1px solid grey;
+            margin:0px;
+            padding:0px;
+            text-align:center;
+            background:black;
+            color:white;
+            float:left;
+            width:1520px;
+            line-height:50px;
+        }
+</style>
+<body>
+    <h1>灵异精选</h1>
+
+    <div id = "con">
+        <ul>
+            <li><a href = "index.html">首页</a></li>
+            <li><a href = "#">漫画</a></li>
+            <li><a href = "#">高评专区</a></li>
+            <li><a href = "#">免费专区</a></li>
+            <li><a href = "#">付费专区</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img1" onmouseover = "bigger1()" onmouseout = "smaller1()" src = "../images/灵异1.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            我被丧尸咬了，貌似也不是坏事。
+                            因为被咬之后，不仅没有变成丧尸，而且丧尸也都不会再攻击我了。
+                            当人们在丧尸的追逐下，艰难求生，而我在丧尸中，自由穿行。
+                            当人们为了一块面包，刀枪相向时，而我已经收集了大量的物资，顺手养了一个军团。
+                            当人们在丧尸的围攻下，勉强建立营地，而我已经成为了一方的霸主！
+                        </span>
+                    </div>
+                    
+                    <br>
+                   <div id = "demo1"><a href="//b.faloo.com/p/514596/1.html" ><b>开始阅读</b></a></div>
+                   <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>我被丧尸咬了</h2>
+                <span>
+                    作者：
+                    <a href="//b.faloo.com/l/0/1.html?t=2&amp;k=%ba%ae%d2%b9%b9%c2%b5%c6%d2%bb%ca%d6%df%a3" >寒夜孤灯一手撸</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img2" onmouseover = "bigger2()" onmouseout = "smaller2()" src = "../images/灵异2.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            项钱穿越到一个由众多盗墓小说综合组成的高武神话世界，觉醒了一个以发掘古墓，让古墓内
+                            冥器国宝重见天日的系统，让他从长沙城老九门开始了盗墓生涯。
+                        </span>
+                    </div>
+                    
+                    <div id = "demo1" ><a href="//b.faloo.com/p/666100/1.html" ><b>开始阅读</b></a></div>
+                    <div id = "demo2" ><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>从老九门开始</h2>
+                <span>
+                    作者：
+                    <a href="//b.faloo.com/l/0/1.html?t=2&amp;k=%cd%f5%c7%ef%d3%ea">王秋雨</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>          
+    <br>
+    <table cellspacing = "0">
+        <tr>
+            <td><img id = "img3" onmouseover = "bigger3()" onmouseout = "smaller3()" src = "../images/灵异3.jpg" style = "width:200px;height:250px"></td>
+            <td>
+                <div>
+                    <h3>小说简介：</h3>
+                    <div id = "demo">
+                        <span>
+                            孙洪雷：“这个世界上就没有什么是我孙洪雷不敢做的事情，除了挑战李玄家的猛鬼屋！”
+                            黄波：“我发誓李玄家的猛鬼屋是我去过最最恐怖的鬼屋，没有之一！”
+                            杨密：“以前一直不知道怎么演恐怖类的电影电视，直到我去了李玄家的猛鬼屋！”
+                            热芭：“李玄哥哥你就告诉我，你们家的猛鬼屋里面到底有没有鬼，我保证绝不泄露出去！”
+                            张忆谋：“我想问一下，你家鬼屋里面的道具都是怎么做的，还有你家鬼屋里面的员工，他们有没有兴趣加盟我的新电影，片酬好说，绝对主角！”
+                            陈开歌：“李玄先生，能否租用一下你家鬼屋，就拍几个镜头，价钱你随便开，绝不还价！”
+                            李玄：“我只想安安静静的开鬼屋，在大家平淡无奇..
+                        </span>
+                    </div>
+                    
+                    <br>
+                    <div id = "demo1"><a href="//b.faloo.com/p/697198/1.html"><b>开始阅读</b></a></div>
+                    <div id = "demo2"><a href = "#"><b>加入书架</b></a></div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h2>我家鬼屋贼恐怖</h2>
+                <span>
+                    作者：
+                    <a href="//b.faloo.com/l/0/1.html?t=2&amp;k=%cf%eb%b3%d4%bb%f0%b9%f8" >想吃火锅</a>
+                </span>
+            </td>
+            <td></td>
+        </tr>
+
+    </table>          
+    
+    <span class = "butText">
+        版权所有：陈泓如 | 网页信息 | 创建日期：2020/6/30 | 技术支持：javascript、HTML、CSS | 制作理念：构建一个小说网站
+    </span>
+</body>
+<script type = "text/javascript">
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var img3 = document.getElementById("img3");
+
+    function bigger1(){
+        img1.style.width = "250px";
+        img1.style.height = "300px";
+    }
+
+    function smaller1(){
+         img1.style.width = "200px";
+         img1.style.height = "250px";
+    }
+
+    function bigger2(){
+        img2.style.width = "250px";
+        img2.style.height = "300px";
+    }
+
+    function smaller2(){
+         img2.style.width = "200px";
+         img2.style.height = "250px";
+    }
+
+    function bigger3(){
+        img3.style.width = "250px";
+        img3.style.height = "300px";
+    }
+
+    function smaller3(){
+         img3.style.width = "200px";
+         img3.style.height = "250px";
+    }
+    
+</script>
+</html>
