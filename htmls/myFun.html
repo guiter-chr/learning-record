@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = init;
+    function init(){
+        var gain = son(100,5);
+        var money = 100;
+        var cost = 80;
+        var remain = money - cost;
+        window.alert("买油剩下的钱是：" + remain + "元");
+    }
+
+    function Gain(money,oil){
+        this.money = money;
+        this.oil = oil;
+    }
+
+    function son(money,oil,tip){
+        console.log("儿子去超市里买油");
+        var gain = new Gain(money,oil);
+        return gain;
+    }
+    
+</script>
+<body>
+    
+</body>
+</html>

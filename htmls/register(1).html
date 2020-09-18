@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register(1)</title>
+</head>
+<script>
+  function getDate(){
+      var date = new Date();
+      var a = date.toLocaleString();
+      var b = document.getElementById("time").innerHTML = a;
+
+  }
+
+  setInterval("getDate()",1000)
+
+</script>
+<body>
+  <div id = "time"></div>
+</body>
+</html>

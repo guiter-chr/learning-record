@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <!-- <p>在 for-in 循环对象的属性时，使用中括号（[]）来访问属性的值：</p>
+    <p id = "demo"></p>
+    <script>
+        var myobj = {"name":"chenhongru","height":180,"weight":145}
+        for(var i in myobj){
+            document.getElementById("demo").innerHTML += myobj[i] + "<br>" ;
+        }
+    </script> -->
+    <script>
+    //1.用shift()方法
+    //shift：删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined
+    var number = [1,2,3,4,5];
+    number.shift();     //得到1
+    alert(number);      //[2,3,4,5]   
+   
+    //2.用pop()方法
+    //pop：删除原数组最后一项，并返回删除元素的值；如果数组为空则返回undefined
+               //得到5
+    window.onload = init;
+    function init(){
+        var number = [1,2,3,4,5];
+        number.pop();
+        document.getElementById("demo").innerHTML = number;  //[1,2,3,4]
+    }
+
+    //3.用splice方法        这个方法很强大，可以对数组任意项进行增加，删除，替换操作
+    //修改操作：
+    var number = [1,2,3,4,5];
+    number.splice(2,1,6,7);
+    alert(number);//1,2,6,7,4,5
+//第一个参数是准备操作的数组位置，第二个参数是操作位置后面的数组项数，第三个以后的就是，被替换后的内容
+// 例子就是表示：从chaomao这个数组位置2开始（也就是值为3的那一项，数组下标从0开始的），位置2后的一项，替换成成8，9
+// 如果把第二个参数改为2，也就是chaomao.splice(2,2,8,9)，也就是说位置2后面的两项换成8，9，打印出来的结果就是1,2,8,9,5，3和4这2两项被换掉了
+// 这里需要说明的是，被替换的项数不一定要和替换的项数相等，1项可以被换成3项，5项也可以被换成2项，基于这个原理，我们就用这个方法来对数组进行添加和删除操作
+
+    //删除操作
+    number.splice(2,1);
+    alert(number);//1,2,4,5
+    //上面例子中，把chaomao中的位置2后的1项替换成空的，因为后面没有内容，结果可以看到，把3这项删除了
+
+    //添加操作：
+    number.splice(2,0,8,9)
+    alert(number);//1,2,3,8,9,4,5
+    //上面例子中，把chaomao中位置2后的0项换成8,9，也就等于添加了两项
+    //其实，删除和添加操作都只是splice修改方法的两种衍生罢了
+
+
+    </script>
+    <span>1,2,3,4,5</span>
+    <p id="demo"></p>
+</body>
+</html>

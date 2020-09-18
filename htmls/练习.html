@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="text/javascript" language="javascript">
+    window.onload = init;
+    var btns;
+    //作用域   全局变量  局部变量
+    function init(){
+        // var btnOK = document.getElementById("btnOK"); 
+        // var btnCancel = document.getElementById("btnCancel");
+        // var inputSubmit = document.getElementById("inputSubmit"); 
+        //多个元素  btns:数组 
+       
+        btns = document.getElementsByClassName("btn");
+
+       
+        // for(var i = 0;i <= 2;i++)
+        // {
+        //     btns[i].onclick = btnClick;
+        // }
+        // var i = 0;
+        // while(i < btns.length)
+        // {
+        //     btns[i].onclick = btnClick;
+        //     i++;
+        // }
+        var i = 0;
+        do{
+            btns[i++].onclick = btnClick;
+        }while(i < btns.length);
+        // btns[0].onclick = btnClick;//OK
+        // btns[1].onclick = btnClick;//Cancel
+        // btns[2].onclick = btnClick;//Submit
+        // var spanInfo = document.getElementById("spanInfo"); 
+
+        // btns[0].onclick = function(){
+        //         spanInfo.innerHTML = "OK"
+        // };//OK .
+        // btns[1].onclick = function(){
+        //         spanInfo.innerHTML = "CANCEL"
+        // };//Cancel
+        // btns[2].onclick = function(){
+        //         spanInfo.innerHTML = "SUBMIT"
+        // };//Submit
+
+        //btnOK.onclick = btnClick;
+        //1.事件类型  2.事件处理函数  3.处理时间true false,默认
+        //attachEvent()  addEventListener()
+        //btnOK.addEventListener("click",btnClick);
+        //removeEventListener():移除事件监听器 detachEvent()IE8
+        // if(btnOK.addEventListener)
+        // {
+        //     btnOK.addEventListener("click",btnClick);   
+        // }else{
+        //     btnOK.attachEvent("click",btnClick);   
+        // }
+
+        // btnCancel.onclick = btnClick;
+        // inputSubmit.onclick = btnClick;
+        
+
+        //作业1：自学并写一个Demo，把Array对象中所有方法全部测试一遍
+        //作业2：自学length是否能用到数组中，数组长度如何获取
+        //作业3：自学for..in循环，应用到数组的操作中
+    }
+
+    //innerText  innerHTML
+    function btnClick(){
+        var spanInfo = document.getElementById("spanInfo"); 
+
+        // if(event.type == "mouseover"){
+        //      spanInfo.innerHTML = "1234";   
+        // } 
+        //spanInfo.innerText = "<button>1234<button>";
+        var obj = event.srcElement ? event.srcElement : event.target;
+
+        if(obj == btns[0])
+        {
+            spanInfo.innerHTML = "OK";
+        }else   if(obj == btns[1]){
+                    spanInfo.innerHTML = "Cancel";
+                }else{
+                    spanInfo.innerHTML = "Submit";
+                }    
+        // if(obj === btnOK) //恒等于
+        // {
+        //     spanInfo.innerHTML = "你点击了OK按钮";   
+        // }else   if(obj === btnCancel){
+        //             spanInfo.innerHTML = "你点击了Cancel按钮";
+        //         }else{
+        //             spanInfo.innerHTML = "你点击了Submit按钮";
+        //         }
+        //document.getElementById("spanInfo").innerHTML = "1111";
+    }
+</script>
+<style>
+    #btnOK{
+      color:red;  
+    }
+    button{
+        font-size: 20px;
+    }
+    .btn{
+        color: blueviolet;
+    }
+</style>
+<body>
+    <button class="btn">OK</button>
+    <button class="btn">Cancel</button>
+    <input  class="btn" type="button" value="Submit" />
+    <br />
+    <span id="spanInfo">提示信息</span>
+</body>
+</html>

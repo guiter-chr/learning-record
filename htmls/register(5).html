@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<script>
+    window.onload = init;
+    //用户名，密码，二次密码，手机号码，用户输入验证码，提交按钮，系统给定验证码
+    var userName,psd,secPsd,phNum,userVerCode,submit,sysVerCode,chbox,phPlace;
+    //信息提示：用户名，密码，二次密码，验证码，电话号码
+    var infoUserName,infoPsd,infoSecPsd,infoVerCode,infoPhNum;
+    function init(){
+        userName = document.getElementById("userName");
+        psd = document.getElementById("psd");
+        secPsd = document.getElementById("secPsd");
+        phNum = document.getElementById("phNum");
+        userVerCode = document.getElementById("userVerCode");
+        submit = document.getElementById("submit");
+        sysVerCode = document.getElementById("sysVerCode");
+        chbox = document.getElementById("chbox");
+           
+
+        infoUserName = document.getElementById("infoUserName");
+        infoPsd = document.getElementById("infoPsd");
+        infoSecPsd = document.getElementById("infoSecPsd");
+        infoPhNum = document.getElementById("infoPhNum");
+        infoVerCode = document.getElementById("infoVerCode");
+
+        userName.onfocus = checkUserName;
+        userName.onblur = checkUserName; 
+
+        psd.onfocus = checkPsd;
+        psd.onblur  = checkPsd;
+
+        secPsd.onfocus = checkSecPsd;
+        secPsd.onblur  = checkSecPsd;
+
+        phNum.onfocus = checkPhNum;
+        phNum.onblur  = checkPhNum;
+      
+        userVerCode.onfocus = showVerCode;
+        sysVerCode.onclick  = showVerCode;
+
+        userVerCode.onblur = checkVerCode;
+
+        submit.onclick = checkAll;
+    }
+    //合法字符字典
+    var dictUserName = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.-_";
+
+    //判断一个字符串是否包含特殊字符
+    //str:需要判断的字符串  返回值：若包含，返回true,否则返回false
+    //自己写，暂时不允许使用正则表达式
+    //str:Hyper@1314
+    function hasIllegalChar(str,dict){
+        for(var i = 0;i < str.length;i++)
+        {
+            if(dict.indexOf(str.charAt(i)) == -1)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    //用于验证用户名输入是否正确，若正确，则提示信息为绿色，若错误，则获取焦点提示蓝色，失去焦点提示红色
+    //1.长度为0 2.长度不在6-18之间 3.包含了特殊字符(字母、数字._-以外的字符) 4.数字打头  5.特殊字符打头（.-_）
+    //6.用户名已注册（+5分） 7.敏感词 汇(+5分)
+    function checkUserName(){
+        var str = userName.value; 
+
+        if(event.type == "focus")
+        {
+            infoUserName.style.color = "blue";    
+        }else{
+            infoUserName.style.color = "red";
+        }
+
+        if(str.length == 0)
+        {
+            infoUserName.innerHTML = "用户名不能为空";
+            return false;              
+        }else   if(str.length < 6 || str.length > 18)
+                {
+                    infoUserName.innerHTML = "用户名长度不在6~18之间";
+                    return false;
+                }else   if(isNaN(Number(str.charAt(0))) == false){
+                            infoUserName.innerHTML = "不能以数字打头";
+                            return false;
+                        }else   if(str.charAt(0) == "_" || str.charAt(0) == "-" || str.charAt(0) == "."){
+                                    infoUserName.innerHTML = "不能以特殊字符打头";
+                                    return false;
+                                }else   if(hasIllegalChar(str,dictUserName) == true)
+                                        {
+                                            infoUserName.innerHTML = "不能包含特殊字符"; 
+                                            return false;       
+                                        }else{
+                                            infoUserName.innerHTML = "恭喜您，可以注册";
+                                            infoUserName.style.color = "green";
+                                            return true;
+                                        }
+    }
+    //验证str是否只有字母+数字来构成，不能包含其他字符，也不能只有一种
+    //若是则返回true,否则返回false 
+    //设定标志变量：flagSpecial = 1 -> 包含了特殊字符  flagAlpha = 1 ->只包含字母  flagNum = 1 ->只包含数字
+    var dictPsd = "QAZXSWEDCVFRTGBNHYUJMKILOPqazxswedcvfrtgbnhyujmkiolp1234567890";
+    var dictAlpah = "QAZXSWEDCVFRTGBNHYUJMKIOLPqazxswedcvfrtgbnhyujmkilop";
+    var dictNum = "0123456789";
+
+    function isAlphaAndNum(str){
+        var flagSpecial = 0,flagAlpha = 0,flagNum = 0;
+        
+        if(hasIllegalChar(str,dictPsd) == true)
+        {
+            flagSpecial = 1;
+            return false;
+        }
+        if(hasIllegalChar(str,dictAlpah) == false){
+            flagAlpha = 1;
+            return false;
+        }
+        if(hasIllegalChar(str,dictNum) == false){
+            flagNum = 1;
+            return false;
+        }
+        return true;
+    }
+    //用于验证密码输入是否正确，若正确，则提示信息为绿色，若错误，则获取焦点提示蓝色，失去焦点提示红色
+    //1.空  2。6-18  3.只有数字，只有字母，包含了非字母和数字
+    function checkPsd(){
+        var str = psd.value;
+
+        if(event.type == "focus")
+        {
+            infoPsd.style.color = "blue";
+        }else{
+            infoPsd.style.color = "red";
+        }
+
+        if(str.length == 0)
+        {
+            infoPsd.innerHTML =  '<img src="../images/onError.gif">' + "密码不能为空";
+            return false;
+        }else   if(str.length < 6 || str.length > 18)
+                {
+                    infoPsd.innerHTML = '<img src="../images/onError.gif">' + "密码长度不在6-18之间";
+                    return false;
+                }else   if(isAlphaAndNum(str) == false){
+                            infoPsd.innerHTML = '<img src="../images/onError.gif">' + "请尝试字母+数字的组合";
+                            return false;
+                        }else{
+                            infoPsd.innerHTML = '<img src="../images/right.jpg">' + "输入正确";
+                            infoPsd.style.color = "green";
+                            return true;
+                        }
+    }
+    //用于验证二次密码输入是否正确，若正确，则提示信息为绿色，若错误，则获取焦点提示蓝色，失去焦点提示红色
+    //1.空  2。6-18  3.只有数字，只有字母，包含了非字母和数字 4.两次密码不相等
+    function checkSecPsd(){
+        var str = secPsd.value;
+        var str2 = psd.value;
+
+        if(event.type == "focus")
+        {
+            infoSecPsd.style.color = "blue";
+        }else{
+            infoSecPsd.style.color = "red";
+        }
+
+        if(str.length == 0)
+        {
+            infoSecPsd.innerHTML =  '<img src="../images/onError.gif">' + "密码不能为空";
+            return false;
+        }else   if(str.length < 6 || str.length > 18)
+                {
+                    infoSecPsd.innerHTML = '<img src="../images/onError.gif">' + "密码长度不在6-18之间";
+                    return false;
+                }else   if(isAlphaAndNum(str) == false){
+                            infoSecPsd.innerHTML = '<img src="../images/onError.gif">' + "请尝试字母+数字的组合";
+                            return false;
+                        }else   if(str != str2){
+                                    infoSecPsd.innerHTML = '<img src="../images/onError.gif">' + "两次密码不相同";
+                                    return false;
+                                }else{
+                                    infoSecPsd.innerHTML = '<img src="../images/right.jpg">' + "输入正确";
+                                    infoSecPsd.style.color = "green";
+                                    return true;
+                                }
+    }
+    //判断指定字符串是否在某个特定范围之内，若在返回true,否则返回false
+    //str:待判定的字符串,scope：给定的某个范围
+    var scopePhNum = ["13","14","15","16","18","19"];
+
+    function isStrInScope(str,scope){
+        for(var i = 0;i < scope.length;i++)
+        {
+            if(str == scope[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    //用于验证手机号码输入是否正确，若正确，则提示信息为绿色，若错误，则获取焦点提示蓝色，失去焦点提示红色
+    //1.长度不对 2.包含特殊字符(非数字) 3.前两位不是13,14,15,16,17,18,19  4.已被注册 
+    //18011165809
+    function checkPhNum(){
+        var str = phNum.value;
+
+        if(event.type == "focus"){
+            infoPhNum.style.color = "blue";
+        }else{
+            infoPhNum.style.color = "red";
+            // alert(str.slice(0,3));
+            // alert(str.substr(0,4));
+            // alert(str.substring(0,5));
+        }
+        if(str.length == 0)
+        {
+            infoPhNum.innerHTML = '<img src="../images/onError.gif">' + "手机号码不能为空";
+            return false;
+        }else   if(str.length != 11 || hasIllegalChar(str,dictNum) == true || isStrInScope(str.substr(0,2),scopePhNum) == false)
+                {
+                    infoPhNum.innerHTML = '<img src="../images/onError.gif">' + "手机号码输入有误";
+                    return false;
+                }else{
+                    infoPhNum.innerHTML = '<img src="../images/right.jpg">' + "输入正确";
+                    infoPhNum.style.color = "green";
+                    return true;
+                }
+    }
+    //产生新的验证码，随机的4位字母+数字的格式
+    //图片类验证码，5分，微信二维码或短信验证码10分
+    //在dictPsd中的62个字符里随机取4个字符构成验证码 0~61 
+    //dictPsd = "QAZXSWEDCVFRTGBNHYUJMKILOPqazxswedcvfrtgbnhyujmkiolp1234567890";
+    //C:rand  srand JS:random
+    function createVerCode(length,dict){
+        var str = "";
+        var randNum;
+
+        for(var i = 0;i < length;i++){
+            randNum = Math.floor(Math.random() * dict.length) // 0~61  15  18  3  51
+            str += dict.charAt(randNum); 
+        }
+
+        return str;
+    }
+    //显示验证码
+    function showVerCode(){
+       var str = createVerCode(4,dictPsd);
+
+       sysVerCode.innerText = str;
+    }
+    //用于验证用户输入验证码是否与系统给定验证码相同，若正确，则提示信息为绿色，若错误，则提示红色
+    function checkVerCode(){
+        var str = userVerCode.value;
+        var str2 = sysVerCode.innerText;
+
+        if(str.toLowerCase() == str2.toLowerCase())
+        {
+            infoVerCode.style.color = "green";
+            infoVerCode.innerHTML = '<img src="../images/right.jpg">' + "输入正确";
+            return true;
+        }else{
+            infoVerCode.style.color = "red";
+            infoVerCode.innerHTML = '<img src="../images/onError.gif">' + "验证码输入错误";
+            return false;
+        }
+    }
+    //用于提交注册信息时，验证所有信息是否均正确，若正确，转入welcome.html，否则清空文本框内容
+    //js  return false 事件处理 
+    function checkAll(){
+        //window.alert(navigator.appVersion + " " + screen.width + " " + screen.height);
+        if(chbox.checked == true && checkPhNum() == true && checkPsd() == true && checkSecPsd() == true && checkUserName() == true && checkVerCode() == true)
+        {
+            //window.alert("Welcome");
+            //window.location.assign("https://www.baidu.com");
+            location.replace("手机号码查询.html");
+        }
+        return false;
+    }
+    //1.自己写课堂代码
+    //2.自学 return false
+    //  JS 中的return false的作用:
+    //      Return False 就相当于终止符,终止默认的事件行为，反之,Return True 就相当于执行符,执行终止默认的事件行为。
+    //      在js中return false的作用一般是用来取消默认动作的。比如你单击一个链接除了触发你的
+    //      onclick时间（如果你指定的话）以外还要触发一个默认事件就是执行页面的跳转。所以如果
+    //      你想取消对象的默认动作就可以return false。
+
+//blog.csdn.net/yusirxiaer/java/article/details/62225291
+    //3.自学正则表达式，然后用正则来进行用户名等的验证
+    //4.完成手机号码归属地判断
+</script>
+
+<body>
+    <div>
+        <form> 
+            <span>用 户 名：</span><input  type="text" id="userName"><span>@tom.com</span><span id="infoUserName"></span><br>
+            <span>密    码：</span><input  type="password" id="psd"><span id="infoPsd"></span><br>
+            <span>确认密码：</span><input  type="password" id="secPsd"><span id="infoSecPsd"></span><br>
+            <span>手机号码：</span><input  type="text" id="phNum"><span id="infoPhNum"></span><br>
+            <span>验 证 码：</span><input  type="text" id="userVerCode"><span id="sysVerCode">1A5X</span><span id="infoVerCode"></span><br>
+            <input type="checkbox" id="chbox" checked><span>我已阅读并接受服务条款</span><br>
+            <input type="submit" value="注册" id="submit">
+        </form>
+    </div>  
+</body>
+</html>

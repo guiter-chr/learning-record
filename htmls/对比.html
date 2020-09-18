@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<script>
+//所有需要展示的图片建立一个数组
+				var images = ["../images/1.jpg","../images/2.jpg","../images/3.jpg","../images/4.jpg"];
+//用于显示图片的索引			
+				var index = 0;  
+
+//建立  上一张 按钮函数
+				function lastImg(){
+					var showImg = document.getElementById("showImg");
+				
+//下一张是index++   上一张是index--
+					index--;
+					if(index<0){
+						index = images.length-1;
+					}
+					showImg.src = images[index];
+				}
+			
+			function nextImg(){
+					var showImg = document.getElementById("showImg");
+					
+					index++;
+					if(index>=images.length){
+						index = 0;
+					}
+					showImg.src = images[index];   
+				}
+			
+//自动播放
+				var flag = true;
+				
+				function autoPlay(){
+					if(!flag){
+						return; 
+					}		
+				window.setTimeout(autoPlay,3000);
+				nextImg();
+				}
+
+//停止播放
+			function stopAutoPlay(){
+				flag = false;
+			}
+//开始播放
+			function startAutoPlay(){
+				flag = true;
+				window.setTimeout(autoPlay,3000);
+			}
+		
+			</script>
+	</head>
+	<body>
+		<img id = "showImg" src="../images/1.jpg"
+		 width="500px" height="300px" 
+		 
+		onmouseover="stopAutoPlay()"
+		onmouseout="startAutoPlay()"		 
+		/>
+		<br />
+		
+		<input type="button" value="上一张" onclick="lastImg()"/>
+		
+		<input type="button" value="下一张" onclick="nextImg()" />
+	</body>
+</html>

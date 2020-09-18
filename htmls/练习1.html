@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习1</title>
+</head>
+<style>
+    *{margin:0;padding:0;list-style:none;}
+        #A{width:1000px;margin:100px auto;}
+        #A ul li{float:left;width:200px;height:40px;line-height:30px;text-align:center;}
+        #A a{text-decoration:none;color:#fff;display:block;width:200px;height:40px;background:grey;}
+        #A a:hover{background:pink;}
+        #A ul ul{display:none;}
+</style>
+
+<body>
+    <div id = "A">
+        <ul >
+            <li id = "li01">
+                <a href = "#">首页</a>
+                <ul id = "ul01">
+                    <li><a href = "#">首页</a></li>
+                    <li><a href = "#">首页</a></li>
+                    <li><a href = "#">首页</a></li>
+                    <li><a href = "#">首页</a></li>
+                </ul>
+            </li>
+            <li id = "li02">
+                <a href = "#">漫画</a>
+                <ul id = "ul02">
+                    <li><a href = "#">漫画</a></li>
+                    <li><a href = "#">漫画</a></li>
+                    <li><a href = "#">漫画</a></li>
+                    <li><a href = "#">漫画</a></li>
+                </ul>
+            </li>
+            <li id = "li03">
+                <a href = "#">高评专区</a>
+                <ul id = "ul03"> 
+                    <li><a href = "#">高评专区</a></li>
+                    <li><a href = "#">高评专区</a></li>
+                    <li><a href = "#">高评专区</a></li>
+                    <li><a href = "#">高评专区</a></li>
+                </ul>
+            </li>
+            <li id = "li04">
+                <a href = "#">免费专区</a>
+                <ul id = "ul04">
+                    <li><a href = "#">免费专区</a></li>
+                    <li><a href = "#">免费专区</a></li>
+                    <li><a href = "#">免费专区</a></li>
+                    <li><a href = "#">免费专区</a></li>
+                </ul>
+            </li>
+            <li id = "li05">
+                <a href = "#">付费专区</a>
+                <ul id = "ul05">
+                    <li><a href = "#">付费专区</a></li>
+                    <li><a href = "#">付费专区</a></li>
+                    <li><a href = "#">付费专区</a></li>
+                    <li><a href = "#">付费专区</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript">
+    function myFunction(param1,param2){
+      var myli = document.getElementById(param1);
+      var myul = document.getElementById(param2);
+    myli.onmouseover = function(){
+        myul.style.display = 'block';
+      }
+        myli.onmouseout = function(){
+        myul.style.display = 'none';
+     }
+  }
+    myFunction('li01','ul01');
+    myFunction('li02','ul02');
+    myFunction('li03','ul03');
+    myFunction('li04','ul04');
+    myFunction('li05','ul05');
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<script>
+//				所有需要展示的图片建立一个数组
+				var images = ["../images/1.jpg","../images/2.jpg","../images/3.jpg","../images/4.jpg"];
+				var Imgs = ["../images/p1.png","../images/p2.png"];
+			
+				var index = 0;  //用于显示图片的索引
+				var imgDex = 0;
+//**********************************************
+
+//建立  上一张 按钮函数
+				function lastImg(){
+					var showImg = document.getElementById("showImg");
+				
+//下一张是index++   上一张是index--
+					index--;
+					if(index<0){
+//数组中的最小下标为0，不可能有比0还小的下标，所以当index到达0这个下标位置的时候就已经到头，如果还要继续向前遍历则 index<0  此时我们使index = images.length-1(数组的最后一个下标) 实现重复展示图片效果
+						index = images.length-1;
+					}
+					showImg.src = images[index];
+				
+				}
+//**********************************************
+			//建立  下一张  函数
+			
+			function nextImg(){
+					var showImg = document.getElementById("showImg");
+					
+					index++;
+					if(index>=images.length){
+//	因为数组的最大下标为length-1，所以length实际上是已经超出了数组最大下标，index中文含义为下标，所以当下标等于length-1的时候已经到了数组的最后一个元素位置，当index = lengeh的时候使index=0，这样可以循环点击
+						index = 0;
+					}
+					showImg.src = images[index];    //这里展示的src链接实际上是遍历数组中的各项元素（各项元素为图片的超链接）
+					
+				}
+			
+//**********************************************
+				//自动播放
+				var flag = true;
+				
+//				建立播放函数(方法)
+				function autoPlay(){
+					if(!flag){
+						return; 
+//这里可以这样理解：if内的flag为假的时候则结束，如果flag为真则跳到window.setTimeout()...这一步
+					}
+//			自己进行递归调用,然后再调用切换图片的方法		
+				        window.setTimeout(autoPlay,3000);
+//		3000毫秒切换一次图片
+				        nextImg()
+                    
+			    }
+
+//停止播放
+			function stopAutoPlay(){
+				flag = false;
+				
+			}
+//开始播放
+			function startAutoPlay(){
+				flag = true;
+			
+				window.setTimeout(autoPlay,3000);
+			}
+			
+			
+			</script>
+	</head>
+	
+    
+	<body>
+        <img id = "showImg" src="../images/1.jpg"
+        width="500px" height="300px" 
+		 
+		 onmouseover="stopAutoPlay()"
+		onmouseout="startAutoPlay()"		 
+		/>
+
+		<!--当鼠标移动到目标上时 = "停止播放"-->
+		 <!--当鼠标离开目标时 = "开始播放"-->
+		<br />
+		
+		
+	</body>
+</html>

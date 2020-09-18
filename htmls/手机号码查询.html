@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机号码归属地的查询</title>
+     
+</head>
+ <script>
+    window.onload=init;
+
+    function init(){
+        demo = document.getElementById("demo").value;
+        bto = document.getElementById("bto");
+        bto.onclick = demo;
+    }
+
+    function ajaxTest()
+    {
+        var xmlhttp;
+        if(window.XMLHttpRequest)
+        {
+            xmlhttp = new XMLHttpRequest();
+        }else   {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.open("GET","http://tcc.taobao.com/cc/json/mobile_tel_segment.tatehtm?tel= demo",true);
+                xmlhttp.send();
+                xmlhttp.onreadystatechange = function(){
+                    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                    {
+                        alert(xmlhttp.responseText);
+                    }
+                }
+    }
+</script> 
+    
+<body>
+    <button type="button" id="bto">查询</button>
+    <input type="text" id="demo">
+</body>
+</html>

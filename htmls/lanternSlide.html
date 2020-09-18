@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lanternSlide</title>
+</head>
+<script>
+    var min = 1,max = 5;
+    var image = new Array();
+        image[0] = "../images/小说2.jpg";
+        image[1] = "../images/小说3.jpg";
+        image[2] = "../images/小说4.jpg";
+        image[3] = "../images/小说5.jpg";
+        image[4] = "../images/小说6.jpg";
+         
+    var liImg = new Array();
+        liImg[0] = "i0";
+        liImg[1] = "i1";
+        liImg[2] = "i2";
+        liImg[3] = "i3";
+        liImg[4] = "i4";
+
+    var liId = new Array();
+        liId[0] = "p1";
+        liId[1] = "p2";
+        liId[2] = "imageNo0";
+        liId[3] = "imageNo1";
+        liId[4] = "imageNo2";
+
+    var int = self.setInterval("loop()",2000);
+
+    function loop()
+    {
+        var str = document.getElementById("img").src;
+
+        for(var i = 0;i < 5;i++)
+        {
+            if(min == 5)
+            {
+                min = 0;
+            }
+            if(i == min)
+            {
+                document.getElementById("img").src = image[i];
+                min++;
+                
+                if(i == 0)
+                {
+                    document.getElementById(liImg[i].src="../images/p1.png");
+                    document.getElementById(liImg[4].src="../images/p2.png");
+                }else{
+                    document.getElementById(liImg[i].src="../images/p1.png");
+                    document.getElementById(liImg[i-1].src="../images/p2.png");
+                }
+                break;
+            }
+        }
+    }
+
+    var a = 0;
+
+    function point(obj)
+    {
+        clearInterval(int);
+        for(var i = 0;i < 5;i++)
+        {
+            if(obj.id == liId[i])
+            {
+                document.getElementById("img").src = image[i];
+                min = i + 1;
+                document.getElementById(liImg[i]).src = "../images/p1.png";
+                for(var a = 0;a < 5;a++)
+                {
+                    if(a != i)
+                    {
+                        document.getElementById(liImg[a]).src = "../images/p2.png";
+                    }
+                }
+            }
+        }
+    }
+
+    function leave()
+    {
+        int = setInterval("loop()",2000);
+    }
+</script>
+<style>
+    #div0{width: 1080px;height: 380px;margin: 0 auto;background-color: beige;}
+
+    img{width: 1080px;height: 380px;display: block;}
+
+    .div1
+    {
+        height: 60px;
+        position: relative;
+        top:-60px;
+        width: 240px;
+        margin: 0 auto;
+        left: 0px;
+        z-index: 999;
+        text-align: center;
+    }
+
+    .div1 ul li
+    {
+        width: 24px;
+        height: 24px;
+        margin: 0 5px;
+        float: left;
+        list-style: none;
+    }
+
+    .div1 ul li img{width: 24px;height: 24px;}
+    .div1 ul li img:hover{cursor: pointer;}
+
+</style>
+<body >
+    <div id="div0">
+        <img src="../images/p1.png" id="img"/>
+        <div class="div1" style="display: block;">
+            <ul>
+                <li id="p1" onmouseover="point(this)" onmouseout="leave()">
+                    <img src="../images/p2.png " alt="" id="i0"/>
+                </li>
+
+                <li id="p2" onmouseover="point(this)" onmouseout="leave()">
+                   <img src="../images/p2.png" alt="" id="i1"/>
+                </li>
+
+                <li id="imageNo0" onmouseover="point(this)" onmouseout="leave()">
+                    <img src="../images/p2.png" alt="" id="i2"/>
+                </li>
+
+                <li id="imageNo1" onmouseover="point(this)" onmouseout="leave()">
+                    <img src="../images/p2.png" alt="" id="i3"/>
+                </li>
+
+                <li id="imageNo2" onmouseover="point(this)" onmouseout="leave()">
+                    <img src="../images/p2.png" alt="" id="i4"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</html>

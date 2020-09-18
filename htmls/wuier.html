@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>下拉菜单</title>
+    <style type="text/css">
+        *{margin:0;padding:0;list-style:none;}
+        #con{width:400px;margin:100px auto;}
+        #con ul li{float:left;width:100px;height:30px;line-height:30px;text-align:center;}
+        #con a{text-decoration:none;color:#fff;display:block;width:100px;height:30px;background:#ccc;}
+        #con a:hover{background:pink;}
+        #con ul ul{display:none;}
+    </style>
+</head>
+<body>
+    <div id="con">
+         <ul>
+            <li id="li01">
+                <a href="javascript:;">平面设计</a>
+                <ul id="ul01">
+                    <li><a href="javascript:;">平面内容</a></li>
+                    <li><a href="javascript:;">平面内容</a></li>
+                    <li><a href="javascript:;">平面内容</a></li>
+                    <li><a href="javascript:;">平面内容</a></li>
+                </ul>
+            </li>
+            <li id="li02">
+                <a href="javascript:;">网页设计</a>
+                 <ul id="ul02">
+                    <li><a href="javascript:;">网页内容</a></li>
+                    <li><a href="javascript:;">网页内容</a></li>
+                    <li><a href="javascript:;">网页内容</a></li>
+                    <li><a href="javascript:;">网页内容</a></li>
+                </ul>
+            </li>
+            <li id="li03">
+                <a href="javascript:;">SEO优化</a>
+                <ul id="ul03">
+                    <li><a href="javascript:;">SEO内容</a></li>
+                    <li><a href="javascript:;">SEO内容</a></li>
+                    <li><a href="javascript:;">SEO内容</a></li>
+                    <li><a href="javascript:;">SEO内容</a></li>
+                </ul>
+            </li>
+            <li id="li04">
+                <a href="javascript:;">UI设计</a>
+                <ul id="ul04">
+                    <li><a href="javascript:;">UI内容</a></li>
+                    <li><a href="javascript:;">UI内容</a></li>
+                    <li><a href="javascript:;">UI内容</a></li>
+                    <li><a href="javascript:;">UI内容</a></li>
+                </ul>
+            </li>
+    </ul>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+  function myFn(param1,param2){
+      var myli = document.getElementById(param1);
+      var myul = document.getElementById(param2);
+      myli.onmouseover = function(){
+        myul.style.display = 'block';
+      }
+      myli.onmouseout = function(){
+         myul.style.display = 'none';
+     }
+  }
+  myFn('li01','ul01');
+  myFn('li02','ul02');
+  myFn('li03','ul03');
+  myFn('li04','ul04');
+</script>

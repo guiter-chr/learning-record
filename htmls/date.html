@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+
+<script>
+    window.onload = init;
+    var dateSpan ;
+
+    function init(){
+        dateSpan = document.getElementById("dateSpan");
+        showTime();
+        run();
+    } 
+    //window.setInterval(showTime,1000);
+    //1.课堂代码功能更新
+    function showTime(){
+        var myDate = new Date();
+        var year = myDate.getFullYear();
+        var month = myDate.getMonth() + 1;
+        var date = myDate.getDate();
+        var day = myDate.getDay();
+        var hours = myDate.getHours();
+        hours = hours < 12 ? ('AM' + hours):hours;
+        hours = hours > 12 ? ('PM' + hours):hours;
+        var mins = myDate.getMinutes();
+        mins = mins < 10 ? ('0' + mins):mins;
+        var secs = myDate.getSeconds();
+        secs = secs < 10 ? ('0' + secs):secs;
+        switch(day)
+        {
+            case 0: day = "日";break;
+            case 1: day = "一";break;
+            case 2: day = "二";break;
+            case 3: day = "三";break;
+            case 4: day = "四";break;
+            case 5: day = "五";break;
+            case 6: day = "六";break;
+        }
+        dateSpan.innerHTML = year + "年" + month + "月" + date + "日" + "星期" + day + " " + hours + ":" + mins + ":" + secs;
+        window.setTimeout(showTime,1000);
+    }  
+    //2.自己设置个条件，clear掉timeout
+    //3.做一个进度条
+     function run(){  
+         var bar = document.getElementById("bar"); 
+         var total = document.getElementById("total"); 
+         bar.style.width=parseInt(bar.style.width) + 1 + "%";  
+         total.innerHTML = bar.style.width; 
+        
+         if(bar.style.width == "100%"){  
+             window.clearTimeout(timeout); 
+             return; 
+        } 
+          var timeout=window.setTimeout("run()",100);   
+     }   
+</script>
+<body>
+    <style>  
+        .container{  
+           width:450px;  
+           border:1px solid red;  
+           height:25px;  
+         } 
+        #bar{  
+           background:red;  
+           float:left; 
+           height:100%;  
+           text-align:center;  
+           line-height:150%; 
+         }  
+    </style>   
+    <span  id = "dateSpan">2020年4月7日星期二 09:33:02</span>
+    </br>
+    <div class="container"> 
+        <div id="bar" style="width:0%"></div>  
+    </div>  
+    <span id="total"></span>  
+</body>
+</html>

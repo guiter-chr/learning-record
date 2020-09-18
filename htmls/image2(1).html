@@ -1,0 +1,153 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageSwitch</title>
+</head>
+<script>
+    window.onload = init;
+   
+    var img1,img2,img3,img4,p1,p2,p3,p4;
+    var cnt = 0;
+
+    function init(){
+        img1 = document.getElementById("img1");
+        img2 = document.getElementById("img2");
+        img3 = document.getElementById("img3");
+        img4 = document.getElementById("img4");
+        p1 = document.getElementById("p1");
+        p2 = document.getElementById("p2");
+        p3 = document.getElementById("p3");
+        p4 = document.getElementById("p4");
+
+        p1.onclick = switchImageManual;
+        p2.onclick = switchImageManual;
+        p3.onclick = switchImageManual;
+        p4.onclick = switchImageManual;
+    }
+
+    var timeout = window.setInterval(switchImageAuto,2000);
+    //手动
+    function switchImageManual(){
+        var srcElement = event.srcElement ? event.srcElement : event.target;
+        switch(srcElement)
+        {
+            case p1 :   img1.style.display = "block";
+                        img2.style.display = "none";
+                        img3.style.display = "none";
+                        img4.style.display = "none";
+                        p1.src = "../images/p2.png";
+                        p2.src = "../images/p1.png";
+                        p3.src = "../images/p1.png";
+                        p4.src = "../images/p1.png";
+                        cnt = 1;
+                        break;
+            case p2 :   img1.style.display = "none";
+                        img2.style.display = "block";
+                        img3.style.display = "none";
+                        img4.style.display = "none";
+                        p1.src = "../images/p1.png";
+                        p2.src = "../images/p2.png";
+                        p3.src = "../images/p1.png";
+                        p4.src = "../images/p1.png";
+                        cnt = 2;
+                        break;
+            case p3 :   img1.style.display = "none";
+                        img2.style.display = "none";
+                        img3.style.display = "block";
+                        img4.style.display = "none";
+                        p1.src = "../images/p1.png";
+                        p2.src = "../images/p1.png";
+                        p3.src = "../images/p2.png";
+                        p4.src = "../images/p1.png";
+                        cnt = 3;
+                        break;
+            case p4 :   img1.style.display = "none";
+                        img2.style.display = "none";
+                        img3.style.display = "none";
+                        img4.style.display = "block";
+                        p1.src = "../images/p1.png";
+                        p2.src = "../images/p1.png";
+                        p3.src = "../images/p1.png";
+                        p4.src = "../images/p2.png";
+                        cnt = 0;
+                        break;
+                        
+        }
+    }
+    //自动
+    function switchImageAuto(){
+        switch(cnt % 4)
+        {
+            case 0 :    img1.style.display = "block";
+                        img2.style.display = "none";
+                        img3.style.display = "none";
+                        img4.style.display = "none";
+                        p1.src = "../images/p2.png";
+                        p2.src = "../images/p1.png";
+                        p3.src = "../images/p1.png";
+                        p4.src = "../images/p1.png";
+                        break;
+            case 1 :    img1.style.display = "none";
+                        img2.style.display = "block";
+                        img3.style.display = "none";
+                        img4.style.display = "none";
+                        p1.src = "../images/p1.png";
+                        p2.src = "../images/p2.png";
+                        p3.src = "../images/p1.png";
+                        p4.src = "../images/p1.png";
+                        break;
+            case 2 :    img1.style.display = "none";
+                        img2.style.display = "none";
+                        img3.style.display = "block";
+                        img4.style.display = "none";
+                        p1.src = "../images/p1.png";
+                        p2.src = "../images/p1.png";
+                        p3.src = "../images/p2.png";
+                        p4.src = "../images/p1.png";
+                        break;
+            case 3 :    img1.style.display = "none";
+                        img2.style.display = "none";
+                        img3.style.display = "none";
+                        img4.style.display = "block";
+                        p1.src = "../images/p1.png";
+                        p2.src = "../images/p1.png";
+                        p3.src = "../images/p1.png";
+                        p4.src = "../images/p2.png";
+                        break;
+        }
+        cnt++;
+    }
+
+    
+    
+</script>
+<style>
+    #img1{
+        display: block;
+    }
+
+    #img2,#img3,#img4{
+        display: none;
+    }
+    #btnContainer{
+        padding-left: 5%;
+    }
+</style>
+<body>
+    <div>
+        <img id="img1" src="../images/1.jpg" width="200px" height="100px">
+        <img id="img2" src="../images/2.jpg" width="200px" height="100px">
+        <img id="img3" src="../images/3.jpg" width="200px" height="100px">
+        <img id="img4" src="../images/4.jpg" width="200px" height="100px">
+    </div>
+    <div id="btnContainer">
+        <img id="p1" src="../images/p1.png">
+        <img id="p2" src="../images/p1.png">
+        <img id="p3" src="../images/p1.png">
+        <img id="p4" src="../images/p1.png">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<script>
+    window.onload = init;
+    var inputs;
+    var spanInfo;
+
+    function init(){
+        inputs = document.getElementsByTagName("input");
+        spanInfo = document.getElementById("spanInfo");
+       // mySelect = document.getElementById("mySelect");
+        inputs[3].addEventListener("click",getValues);
+        //inputs[3].onclick = calculator;
+    }
+    //应用层
+    //数据结构   操作系统   微机原理   计算机组成原理  linux内核
+    function getValues(){
+        var num1,num2;
+        num1 = Number(inputs[0].value);
+        num2 = Number(inputs[1].value);
+        //inputs[4].value = num1 + num2;
+        if(isNaN(num1) == true || isNaN(num2) == true)
+        {
+            mySelect.value = "";
+            inputs[1].value = "";
+            inputs[3].value = "";
+            spanInfo.style.color = "red";
+            spanInfo.innerHTML = "请输入正确数字";
+        }else{
+            spanInfo.style.color = "blue";
+            spanInfo.innerHTML = "输入正确";
+            inputs[3].value = calculate(num1,num2);
+        }
+    }
+     
+    function calculate(num1,num2,option){
+        switch (option)
+        {
+            case 0:option = "+";break;
+            case 1:option = "-";break;
+            case 2:option = "*";break;
+            case 3:option = "/";break;
+            case 4:option = "%";break;
+        }
+        return "num1" option "num2";
+        
+    }
+        //inputs[4].innerHTML = num1 + num2; 
+        //farseFloat
+</script>
+<body>
+    <from>
+        <input type = "text">
+        <select id = "mySelect">
+            <option value = "0">+</option>;
+            <option value = "1">-</option>;
+            <option value = "2">*</option>;
+            <option value = "3">/</option>;
+            <option value = "4">%</option>;
+        </select>
+        <input type = "text">
+        <input type = "button" value = "=">
+        <input type ="text">
+        
+    </from>
+    </br>
+    <span id = spanInfo></span>
+</body>
+</html>

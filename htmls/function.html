@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = init;
+    function init(){
+        var inv = zhouZN(200,"18011165809",5);
+        window.alert("领导：本月话费报销金额:" + inv.amount + "元")
+    }
+
+    function Invoice(amount,phNum){
+        this.amount = amount;
+        this.phNum = phNum;
+    }
+
+    function zhouZN(money,phNum,tip){
+        console.log("我周某人跑步去利州广场充话费");
+        var inv = new Invoice(money,phNum);
+        return inv;
+    }
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- <p id="demo">判定元素位置</p>
+    <button id="but">点我</button>  -->
+
+    <script>
+       //but.onclick = butClick;
+       // var numbers = ["4","9","16","25"]
+        // function num(number){
+        //     return number > 10;
+        // }
+        //  function butClick(){
+        //       var init1 = ["I","love","you","I","love","you","000","I","love"];
+        //       var init2 = init1.valueOf();
+               //init1.splice(3,3,"hh","hhhh");
+           // numbers.reverse();
+        //    var numbers = ["4","16","5","10","25"]
+        //    numbers.sort(function(a,b){return a-b})
+        //     init = document.getElementById("demo");
+        //     init.innerHTML = init2;
+        // }
+        window.onload = init;
+
+        function func(){
+                window.alert("Gloable")
+            }
+
+        function Student(name,age,place){
+            this.name = name;
+            this.age = age;
+            this.place = place;
+            this.sleep = function func(){
+                window.alert("12345");
+            }
+        }
+        
+
+        function init(){
+            var uit3 = new Student("陈泓如",20,"四川宜宾");
+            window.alert(uit3.name);
+            uit3.sleep();
+            this.func();
+
+            function test(){
+                window.alert(this.name + ":" + "我在床上睡觉")
+            }
+           
+            var uit = {
+                        name:"张三",
+                        age:29,
+                        place:"四川",
+                        eat:function(){
+                            window.alert(this.name + ":" + "用手吃饭")
+                        },
+                        sleep:test
+                    };
+                
+            var uit2 = {
+                        name:"李四",
+                        age:30,
+                        place:"成都",
+                        eat:function(){
+                            window.alert(this.name + ":" + "用嘴巴吃饭")
+                        },
+                        sleep:test
+                    };
+            var arr = [uit,uit2];
+
+            for(i = 0;i < arr.length;i++)
+            {
+                arr[i].eat();
+                arr[i].sleep();
+                //console.log(arr[i]);
+                //arr.sort(function(a,b){return a-b});
+            }
+
+        }
+       
+            
+        
+    </script>
+</body>
+</html>

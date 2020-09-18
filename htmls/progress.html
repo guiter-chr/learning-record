@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+</head>
+<script>
+    window.onload = init;
+    var pros;
+    var spanInfo;
+    var value = 0;
+    var max;
+
+    function init(){
+        pros = document.getElementById("pros");
+        spanInfo = document.getElementById("spanInfo");
+
+        spanInfo.onclick = setProgress;
+        max = parseInt(pros.max);
+    }
+
+    function setProgress(){
+        var timeout;
+        value++;
+        pros.value = value;
+        if(value < max)
+        {
+            spanInfo.innerHTML = "当前进度：" + value + "%";
+        }else{
+            spanInfo.innerHTML = "下载完成";
+            window.clearTimeout(timeout);
+        }
+
+        timeout = window.setTimeout(setProgress,100);
+    }
+</script>
+<body>
+    <div>
+        <progress id="pros" value="0" max="100"></progress>
+        <span id="spanInfo">点我下载</span>
+    </div>
+</body>
+</html>
