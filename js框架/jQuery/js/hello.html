@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../../jQuery/js/jquery-3.5.1/jquery-3.5.1/jquery-3.5.1.js"></script>
+<body>
+    <div>
+        <p>文字11</p>
+        <span>
+            <p>文字22</p>
+        </span>
+    </div>
+    <p>文字33</p>
+    <p>文字44</p>
+    <p>文字55</p>
+    <p>文字66</p>
+    <p>文字77</p>
+
+    <h1 id = "idOne">hello</h1> 
+    <h2 class = "classOne">来敲代码吗？</h2>
+
+    <button class = "id">改变背景颜色</button>
+
+    <script>
+        $(document).ready(function(){
+            $(".id").click(function(){
+                $("#idOne,.classOne").css("backgroundColor","red");
+                $("div p").css("color","blue");
+                //选取标题标签h1~h6
+                $(":header").css("backgroundColor","yellow");
+                //选取第一个first，最后一个last
+                $("p:first").css("color","red");
+                //eq lt gt  从0编号
+                $("p:lt(1)").css("backgroundColor","yellow");
+                //even偶   odd奇  从0编号
+                $("p:odd").css("backgroundColor","black");
+                //not
+                //$("p:not(#a)").css("color","red");
+            });
+        });
+        
+    </script>
+
+    
+</body>
+</html>

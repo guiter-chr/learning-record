@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <script src="../../jQuery/jquery-3.5.1/jquery-3.5.1.js">
+    </script>
+</head>
+<body>
+    <style>
+        table{border:1px solid black;}
+        th{text-align:left;}
+        tr{width:150px;height:50px;}
+        td{width:150px;height:50px;}
+    </style>
+    <table cellspacing = "0">
+        <tr>
+            <th >产品名称</th>
+            <th >产地</th>
+            <th >厂商</th>
+        </tr>
+        
+        <tr>
+            <td><p>爱美电视机</p></td>
+            <td>福州</td>
+            <td>爱美电子</td>
+        </tr>
+
+        <tr>
+            <td>美好微波炉</td>
+            <td>北京</td>
+            <td>美好集团</td>
+        </tr>
+
+        <tr>
+            <td>理想电脑</td>
+            <td>沈阳</td>
+            <td>理想科技</td>
+        </tr>
+
+        <tr>
+            <td>编程词典</td>
+            <td>长春</td>
+            <td>明日科技</td>
+        </tr>
+    </table>
+
+    <script>
+        $(document).ready(function(){
+            $("tr:even").css("backgroundColor","yellow");
+            $("tr:odd").css("background","blue");
+            $("tr:eq(0)").css("backgroundColor","white");
+            var color;
+            $("tr:not(:first)").hover(function(){
+                color = $(this).css("backgroundColor");
+                 $(this).css("backgroundColor","pink");
+            },function(){
+                $(this).css("backgroundColor",color)
+            });
+            $("td:has(p)").css("backgroundColor","red")
+            $("td:contains('科技')").css("backgroundColor","red")
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide</title>
+    <script src = "../../jQuery/jquery-3.5.1/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <p>List 1:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>tea</li>
+        <li>milk</li>
+    </ul>
+
+    <p>List 2:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>tea</li>
+        <li>milk</li>
+    </ul>
+
+    <button>点击</button>
+
+    <script>
+        $(function(){
+            $(":button").click(function(){
+                $("ul li:first-child").hide();
+            });
+
+            $(":button").dblclick(function(){
+                $("ul li:first-child").show();
+            });
+        });
+    </script>
+</body>
+</html>
