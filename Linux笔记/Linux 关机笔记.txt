@@ -1,0 +1,79 @@
+Linux 系统启动过程
+linux启动时我们会看到许多启动信息。
+Linux系统的启动过程并不是大家想象中的那么复杂，其过程可以分为5个阶段：
+内核的引导。
+运行 init。
+系统初始化。
+建立终端 。
+用户登录系统。
+init程序的类型：
+SysV: init, CentOS 5之前, 配置文件： /etc/inittab。
+Upstart: init,CentOS 6, 配置文件： /etc/inittab, /etc/init/*.conf。
+Systemd： systemd, CentOS 7,配置文件： /usr/lib/systemd/system、 /etc/systemd/system。
+
+
+
+
+
+在linux领域内大多用在服务器上，很少遇到关机的操作。毕竟服务器上跑一个服务是永无止境的，除非特殊情况下，不得已才会关机。
+正确的关机流程为：sync > shutdown > reboot > halt
+关机指令为：shutdown ，你可以man shutdown 来看一下帮助文档。
+例如你可以运行如下命令关机：
+sync 将数据由内存同步到硬盘中。
+
+shutdown 关机指令，你可以man shutdown 来看一下帮助文档。例如你可以运行如下命令关机：
+
+shutdown –h 10 ‘This server will shutdown after 10 mins’ 这个命令告诉大家，计算机将在10分钟后关机，并且会显示在登陆用户的当前屏幕中。
+
+shutdown –h now 立马关机
+
+shutdown –h 20:25 系统会在今天20:25关机
+
+shutdown –h +10 十分钟后关机
+
+shutdown –r now 系统立马重启
+
+shutdown –r +10 系统十分钟后重启
+
+reboot 就是重启，等同于 shutdown –r now
+
+halt 关闭系统，等同于shutdown –h now 和 poweroff
+最后总结一下，不管是重启系统还是关闭系统，首先要运行 sync 命令，把内存中的数据写到磁盘中。
+关机的命令有 shutdown –h now halt poweroff 和 init 0 , 重启系统的命令有 shutdown –r now reboot init 6。
+
+
+shutdown 会给系统计划一个时间关机。它可以被用于停止、关机、重启机器。shutdown 会给系统计划一个时间关机。它可以被用于停止、关机、重启机器。
+# shutdown -p now  ### 关闭机器
+# shutdown -H now  ### 停止机器      
+# shutdown -r09:35 ### 在 09:35am 重启机器
+要取消即将进行的关机，只要输入下面的命令：
+# shutdown -c
+halt 命令通知硬件来停止所有的 CPU 功能，但是仍然保持通电。你可以用它使系统处于低层维护状态。注意在有些情况会它会完全关闭系统。
+# halt             ### 停止机器
+# halt -p          ### 关闭机器
+# halt --reboot    ### 重启机器
+poweroff 会发送一个 ACPI 信号来通知系统关机。
+# poweroff           ### 关闭机器
+# poweroff --halt    ### 停止机器
+# poweroff --reboot  ### 重启机器
+reboot 命令 reboot 通知系统重启。
+# reboot           ### 重启机器
+# reboot --halt    ### 停止机器
+# reboot -p        ### 关闭机器
+
+
+
+[Tab] 有『命令补全』与『文件补齐』的功能
+[Tab]      ## 接在一串指令的第一个字的后面，则为『命令补全』
+[Tab]      ## 接在一串指令的第二个字以后时，则为『文件补齐』
+若安装 bash-completion 软件，则在某些指令后面使用 [tab] 按键时，可以进行『选项/参数的补齐』功能！
+[Ctrl]+ C 如果在Linux 底下输入了错误的指令或参数，想让当前的程序『停掉』的话，可以输入：
+[Ctrl] + c 
+[Ctrl]-d 『键盘输入结束(End Of File, EOF 或 End Of Input)』的意思
+另外，他也可以用来取代 exit 的输入。
+例如你想要直接离开文字接口，可以直接按下：
+[Ctrl] + d   ## 相当于输入 exit
+[shift]+{[PageUP]|[Page Down]}
+[Shift]+[Page Up]    ## 往前翻页 
+
+[Shift]+[Page Down] ## 往后翻页
